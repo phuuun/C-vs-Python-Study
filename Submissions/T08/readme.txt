@@ -1,0 +1,1 @@
+This participant didn't stop the stopwatch in each questions so we counted his time by subtracting the very last one to the second last one and so on and so on
