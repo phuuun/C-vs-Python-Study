@@ -1,0 +1,5 @@
+n = int(input("Masukkan N : "))
+data = list(map(int, input("Masukkan data : ").split()))
+data.sort()
+print("Data terurut :", *data)
+print(f"Min: {data[0]} | Max: {data[-1]} | Rata-rata: {sum(data)/n:.2f}")
