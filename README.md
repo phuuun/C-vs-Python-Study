@@ -4,6 +4,8 @@ A research project comparing **C** and **Python** across execution speed and dev
 
 ---
 
+**Read the paper:** [Final Paper.pdf](Final%20Paper.pdf)
+
 ## Overview
 
 This study examines two key dimensions of programming language performance:
@@ -23,6 +25,7 @@ C-vs-Python-Study/
 ├── Analysis.ipynb              # Main analysis notebook (graphs, statistics)
 ├── Environment.txt             # Hardware/OS spec used for benchmarking
 ├── Problems.pdf                # Problem set description
+├── Final Paper.pdf             # The full paper (methods, results, limitations)
 │
 ├── Input/
 │   ├── H1/                     # Dataset files for Problem H1 (1k, 5k, 10k integers)
