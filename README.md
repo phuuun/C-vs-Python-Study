@@ -1,6 +1,6 @@
 # C vs Python: A Comparative Performance Study
 
-A research project comparing **C** and **Python** across execution speed and development time, conducted as part of a controlled programming experiment involving 20 participant groups.
+A research project comparing **C** and **Python** across execution speed and development time, conducted as part of a controlled programming experiment with 20 student volunteers.
 
 ---
 
@@ -11,7 +11,7 @@ This study examines two key dimensions of programming language performance:
 - **Execution Speed** — How fast does the compiled/interpreted program run?
 - **Development Time** — How long does it take a programmer to write and verify a solution?
 
-Each participant group solved the same set of algorithmic problems in **both C and Python**, under identical conditions, allowing for a direct head-to-head comparison.
+Each volunteer solved the same set of algorithmic problems in **both C and Python**, under identical conditions, allowing for a direct head-to-head comparison.
 
 ---
 
@@ -81,7 +81,7 @@ Each program was run **5 times** and the average execution time (in milliseconds
 | C        | H2      | 500×500     | 1.4            |
 | C        | H2      | 1,000×1,000 | 5.0            |
 
-> Note: For H1, Python's measured time reflects pure computation (likely using built-in functions), while C includes I/O parsing overhead from `scanf`. For H2, C demonstrates a clear speed advantage at scale.
+> Note: H1 is not a fair language comparison. Most volunteers hand-wrote bubble sort (O(n²)) in C and called Python's built-in `sort()` (Timsort, O(n log n)), so the H1 numbers compare algorithms, not languages. H2 is like for like, and there C wins by about 31× at 1,000×1,000.
 
 ### Development Time (`Raw Data/Development Time2.csv`)
 
@@ -108,8 +108,8 @@ OS       : Windows 11 Home
 
 ## Participants
 
-- **20 groups** (T01–T20) participated in the study
-- Each group submitted solutions in both C (`.c` / `.cpp`) and Python (`.py`)
+- **20 volunteers** (T01–T20), undergraduate computer science students at Binus with experience in both languages
+- Each volunteer submitted solutions in both C (`.c` / `.cpp`) and Python (`.py`)
 - Screenshots of program output were included as proof of correctness
 - Some teams also submitted `.docx` files documenting their development time logs
 
@@ -135,9 +135,9 @@ jupyter notebook Analysis.ipynb
 
 ## Key Findings (Summary)
 
-- **Python** consistently required **fewer lines of code** and shorter **development time** across all difficulty levels, reflecting its higher-level syntax and built-in abstractions.
-- **C** demonstrated significantly **faster execution** on compute-heavy tasks (H2: matrix operations), outperforming Python by up to ~30× at larger scales.
-- For **sorting-heavy tasks (H1)**, Python's built-in functions provided competitive raw speed despite being interpreted, though at larger input sizes C's compiled speed advantage becomes apparent.
+- **Python** took **1.6× less time** to write (3.8 vs 6.1 minutes per task on average) and used **56% fewer lines of code**. The gap is widest on easy and medium tasks and narrows on hard ones.
+- **C** ran the matrix transpose (H2) about **31× faster** at 1,000×1,000.
+- **Sorting (H1)** went to Python, but only because of the algorithms people chose: bubble sort in C against the built-in Timsort in Python (see the note above).
 - The trade-off is clear: **Python favors developer productivity**, while **C favors runtime performance**.
 
 ---
